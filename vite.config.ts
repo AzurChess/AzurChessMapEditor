@@ -10,5 +10,6 @@ const singleFile = process.env.SINGLE_FILE === '1';
 
 export default defineConfig({
   plugins: [react(), ...(singleFile ? [viteSingleFile()] : [])],
+  base: '/AzurChessMapEditor/',
   build: singleFile ? { outDir: 'dist-single' } : {},
 });
